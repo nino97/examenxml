@@ -15,10 +15,42 @@ elementFormDefault="qualified">
 						<xsd:element name="equipacio">
 							<xsd:complexType>
 								<xsd:sequence>
-									<xsd:element name="climatitzador" type="xsd:string" />
-									<xsd:element name="airbagsLaterals" type="xsd:string" />
-									<xsd:element name="automatic" type="xsd:string" />
-									<xsd:element name="cadiraNinPetit" type="xsd:string" />
+									<xsd:element name="climatitzador" >
+										<xsd:simpleType>
+											<xsd:restriction base="xsd:string">
+												<xsd:enumeration value="Si" />
+												<xsd:enumeration value="No" />
+												<xsd:enumeration value="Opcional" />
+											</xsd:restriction>
+										</xsd:simpleType>
+									</xsd:element>
+									<xsd:element name="airbagsLaterals" >
+										<xsd:simpleType>
+											<xsd:restriction base="xsd:string">
+												<xsd:enumeration value="Si" />
+												<xsd:enumeration value="No" />
+												<xsd:enumeration value="Opcional" />
+											</xsd:restriction>
+										</xsd:simpleType>
+									</xsd:element>
+									<xsd:element name="automatic">
+										<xsd:simpleType>
+											<xsd:restriction base="xsd:string">
+												<xsd:enumeration value="Si" />
+												<xsd:enumeration value="No" />
+												<xsd:enumeration value="Opcional" />
+											</xsd:restriction>
+										</xsd:simpleType>
+									</xsd:element>
+									<xsd:element name="cadiraNinPetit" >
+										<xsd:simpleType>
+											<xsd:restriction base="xsd:string">
+												<xsd:enumeration value="Si" />
+												<xsd:enumeration value="No" />
+												<xsd:enumeration value="Opcional" />
+											</xsd:restriction>
+										</xsd:simpleType>
+									</xsd:element>
 								</xsd:sequence>
 							</xsd:complexType>
 						</xsd:element>
