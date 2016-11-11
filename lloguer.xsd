@@ -87,7 +87,15 @@ elementFormDefault="qualified">
 							</xsd:restriction>
 						</xsd:simpleType>
 					</xsd:element>
-					<xsd:element name="email" type="xsd:string" />
+
+					<xsd:element name="email">
+						<xsd:simpleType>
+							<xsd:restriction base="xsd:string">
+					        		<xsd:pattern value="(\w[-._\w]*\w@\w[-._\w]*\w\.\w{2,3})"/>
+					      		</xsd:restriction>
+						</xsd:simpleType>
+					</xsd:element>
+
 					<xsd:element name="tipusClient">
 						<xsd:simpleType>
 							<xsd:restriction base="xsd:string">
