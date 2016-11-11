@@ -66,7 +66,14 @@ elementFormDefault="qualified">
 						<xsd:complexType>
 						    <xsd:simpleContent>
 						      <xsd:extension base="xsd:string">
-							<xsd:attribute name="tractament" type="xsd:string"/>
+							<xsd:attribute name="tractament">
+								<xsd:simpleType>
+									<xsd:restriction base="xsd:string">
+										<xsd:enumeration value="Sr" />
+										<xsd:enumeration value="Sra" />
+									</xsd:restriction>
+								</xsd:simpleType>
+							</xsd:attribute>
 						      </xsd:extension>
 						    </xsd:simpleContent>
 						  </xsd:complexType>
