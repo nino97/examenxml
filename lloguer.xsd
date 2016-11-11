@@ -1,5 +1,7 @@
 <?xml version="1.0"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+xmlns:i="http://www.iessonferrer.net/jgonzalez/lloguerCotxes"
+
 targetNamespace="http://www.iessonferrer.net/jgonzalez/lloguerCotxes"
 elementFormDefault="qualified">
 
@@ -113,6 +115,17 @@ elementFormDefault="qualified">
 
 
 	</xsd:complexType>
+
+ <xsd:key name="matriculakey">
+        <xsd:selector xpath="i:cotxe"/>
+        <xsd:field xpath="@matricula"/>
+    </xsd:key>
+  
+    <xsd:keyref name="lloguerkeyref" refer="i:matriculakey">
+        <xsd:selector xpath="i:client/i:lloguer"/>
+        <xsd:field xpath="i:cotxe"/>
+    </xsd:keyref>
+
 </xsd:element>
 </xsd:schema>
 
